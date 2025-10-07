@@ -1,0 +1,39 @@
+name: Next.js CI Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' # cache node_modules for faster builds
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm ci
+        # npm ci is faster and ensures a clean install using package-lock.json
+
+      # Step 4: Build the Next.js project
+      - name: Build Next.js app
+        run: npm run build
+
+      # Step 5 (optional): Run tests
+      - name: Run tests
+        run: npm test
+
+      # Step 6 (optional): Run Next.js in production mode for verification
+      - name: Start Next.js app
+        run: npm start &
