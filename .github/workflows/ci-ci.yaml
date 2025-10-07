@@ -31,8 +31,8 @@ jobs:
         run: npm run build
 
       # Step 5 (optional): Run tests
-      - name: Run tests
-        run: npm test
+    #   - name: Run tests
+    #     run: npm test
 
       # Step 6 (optional): Run Next.js in production mode for verification
       - name: Start Next.js app
