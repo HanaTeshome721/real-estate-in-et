@@ -10,7 +10,7 @@ export function multiply(a: number, b: number): number {
 
 const MathComponent: React.FC = () => (
   <div>
-    <div>Add: {add(2, 3)}</div>
+    <div>Add:{add(2, 3)}</div>
     <div>Multiply: {multiply(2, 3)}</div>
   </div>
 );
