@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MathComponent, { add, multiply } from '../src/app/mathFunctions';
 
-describe('Math Functions', () => {
+describe('Math', () => {
   test('add function works', () => {
     expect(add(2, 3)).toBe(5);
     expect(add(-1, 1)).toBe(0);
