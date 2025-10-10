@@ -14,7 +14,7 @@ module.exports = {
     '**/?(*.)+(spec|test).[tj]s?(x)',
   ],
 
-  // Support Next.js path aliases like "@/components"
+  // Support Next.js path  like "@/components"
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
