@@ -14,7 +14,7 @@ describe('Math', () => {
     expect(multiply(-1, 4)).toBe(-4);
   });
 
-  test('renders component correctly', () => {
+  test('renders comp correctly', () => {
     render(<MathComponent />);
     expect(screen.getByText(/Add: 5/i)).toBeInTheDocument();
     expect(screen.getByText(/Multiply: 6/i)).toBeInTheDocument();
